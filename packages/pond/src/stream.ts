@@ -32,7 +32,7 @@ import {
     RateNode,
     ReduceNode,
     SelectNode,
-    WindowOutputNode
+    WindowOutputNode,
 } from "./node";
 
 import {
@@ -47,7 +47,7 @@ import {
     RateOptions,
     ReduceOptions,
     SelectOptions,
-    WindowingOptions
+    WindowingOptions,
 } from "./types";
 
 /**
@@ -247,8 +247,8 @@ export class EventStream<IN extends Key, S extends Key> extends StreamInterface<
                         : event(currentKey, Immutable.Map({}));
                     const filteredData = currentEvent.getData().filter(keyIn(fields));
                     return event(currentKey, accumulatedEvent.getData().merge(filteredData));
-                }
-            })
+                },
+            }),
         );
     }
 
@@ -485,7 +485,7 @@ export class KeyedCollectionStream<IN extends Key, S extends Key> extends Stream
      */
     output(callback: KeyedCollectionCallback<IN>) {
         return this.addKeyedCollectionToKeyedCollectionNode<IN>(
-            new KeyedCollectionOutputNode<IN>(callback)
+            new KeyedCollectionOutputNode<IN>(callback),
         );
     }
 

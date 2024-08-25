@@ -22,7 +22,7 @@ export enum WindowType {
     Day = 1,
     Month,
     Week,
-    Year
+    Year,
 }
 
 export abstract class WindowBase {

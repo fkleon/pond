@@ -28,7 +28,7 @@ import {
     RateOptions,
     ReduceOptions,
     SelectOptions,
-    WindowingOptions
+    WindowingOptions,
 } from "./types";
 
 /**
@@ -56,13 +56,13 @@ export abstract class Node<S extends Base, T extends Base> {
     public set(input: S) {
         const outputs = this.process(input);
         if (outputs) {
-            outputs.forEach(output => this.notify(output));
+            outputs.forEach((output) => this.notify(output));
         }
     }
 
     protected notify(output: T): void {
         if (this.observers.size > 0) {
-            this.observers.forEach(node => {
+            this.observers.forEach((node) => {
                 node.set(output);
             });
         }

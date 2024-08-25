@@ -173,7 +173,7 @@ export class Fill<T extends Key> extends Processor<T, T> {
             // Check limit
             if (!_.isNull(this._limit) && this._linearFillCache.length >= this._limit) {
                 // Flush the cache now because limit is reached
-                this._linearFillCache.forEach(e => {
+                this._linearFillCache.forEach((e) => {
                     events.push(e);
                 });
 
@@ -198,7 +198,7 @@ export class Fill<T extends Key> extends Processor<T, T> {
             // is our last good event. This event has already been emitted so
             // it is sliced off.
             //
-            interpolatedEvents.slice(1).forEach(e => {
+            interpolatedEvents.slice(1).forEach((e) => {
                 events.push(e);
             });
 
@@ -308,7 +308,7 @@ export class Fill<T extends Key> extends Processor<T, T> {
             eventList.push(e);
             this._previous = e;
         } else if (this._method === FillMethod.Linear) {
-            this.linearFill(event).forEach(e => {
+            this.linearFill(event).forEach((e) => {
                 eventList.push(e);
             });
         }

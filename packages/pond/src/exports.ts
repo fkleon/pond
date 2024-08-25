@@ -17,7 +17,7 @@ import {
     min,
     percentile,
     stdev,
-    sum
+    sum,
 } from "./functions";
 import { grouped, GroupedCollection } from "./groupedcollection";
 import { index, Index } from "./index";
@@ -54,7 +54,7 @@ export {
     min,
     percentile,
     stdev,
-    sum
+    sum,
 };
 
 export { duration, Duration } from "./duration";

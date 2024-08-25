@@ -50,7 +50,7 @@ export interface ValueMap {
 export enum TimeAlignment {
     Begin = 1,
     Middle,
-    End
+    End,
 }
 
 /**
@@ -60,7 +60,7 @@ export enum TimeAlignment {
  */
 export enum Trigger {
     perEvent = 1,
-    onDiscardedWindow
+    onDiscardedWindow,
 }
 
 /**
@@ -70,7 +70,7 @@ export enum Trigger {
  */
 export enum AlignmentMethod {
     Hold = 1,
-    Linear
+    Linear,
 }
 
 /**
@@ -82,7 +82,7 @@ export enum AlignmentMethod {
 export enum FillMethod {
     Zero = 1,
     Pad,
-    Linear
+    Linear,
 }
 
 /**
@@ -270,7 +270,7 @@ export type ListMapper = (events: Immutable.List<Event<Key>>) => Immutable.List<
  */
 export type ListReducer<T extends Key> = (
     accum: Event<T>,
-    events: Immutable.List<Event<T>>
+    events: Immutable.List<Event<T>>,
 ) => Event<T>;
 
 /**
@@ -283,7 +283,7 @@ export type EventCallback<T extends Key> = (event: Event<T>) => void;
  */
 export type KeyedCollectionCallback<T extends Key> = (
     collection: Collection<T>,
-    key: string
+    key: string,
 ) => void;
 
 /**
