@@ -18,9 +18,7 @@ import { Key } from "./key";
 import { Select } from "./select";
 import { timerange, TimeRange } from "./timerange";
 
-import { CollapseOptions, SelectOptions } from "./types";
-
-import { DedupFunction, ReducerFunction, ValueMap } from "./types";
+import { CollapseOptions, SelectOptions, DedupFunction, ReducerFunction, ValueMap } from "./types";
 
 import {
     avg,

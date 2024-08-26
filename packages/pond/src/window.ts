@@ -169,11 +169,7 @@ export class Window extends WindowBase {
     constructor(d: Duration, period?: Period) {
         super();
         this._duration = d;
-        if (period) {
-            this._period = period;
-        } else {
-            this._period = new Period(d);
-        }
+        this._period = period ? period : new Period(d);
     }
 
     toString() {

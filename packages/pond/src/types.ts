@@ -230,7 +230,7 @@ export interface RenameColumnOptions {
  *                  string.like.this.
  */
 export interface TimeSeriesOptions {
-    seriesList: Array<TimeSeries<Key>>;
+    seriesList: TimeSeries<Key>[];
     reducer?: ReducerFunction | ArrayMapper | ListMapper;
     fieldSpec?: string | string[];
     [propName: string]: any;
@@ -258,7 +258,7 @@ export type ReducerFunction = (values: number[]) => number;
 /**
  * A function which combines an Array<Event<Key>> into a new Array<Event<Key>>
  */
-export type ArrayMapper = (events: Array<Event<Key>>) => Array<Event<Key>>;
+export type ArrayMapper = (events: Event<Key>[]) => Event<Key>[];
 
 /**
  * A function which combines a list of `Event`s into a new list of `Event`s

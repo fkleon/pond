@@ -114,7 +114,7 @@ export interface TimeSeriesEvents<T extends Key> {
 }
 
 export interface TimeSeriesListReducerOptions {
-    seriesList: Array<TimeSeries<Key>>;
+    seriesList: TimeSeries<Key>[];
     reducer?: (events: Immutable.List<Event<Key>>) => Immutable.List<Event<Key>>;
     fieldSpec?: string | string[];
     [propName: string]: any;
@@ -472,11 +472,7 @@ export class TimeSeries<T extends Key> {
      */
     setCollection<M extends Key>(collection: SortedCollection<M>): TimeSeries<M> {
         const result = new TimeSeries<M>(this);
-        if (collection) {
-            result._collection = collection;
-        } else {
-            result._collection = new SortedCollection<M>();
-        }
+        result._collection = collection ? collection : new SortedCollection<M>();
         return result;
     }
 

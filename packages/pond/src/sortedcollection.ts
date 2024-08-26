@@ -19,10 +19,14 @@ import { grouped, GroupedCollection, GroupingFunction } from "./groupedcollectio
 import { Key } from "./key";
 import { Rate } from "./rate";
 import { TimeRange } from "./timerange";
-import { DedupFunction } from "./types";
+import {
+    DedupFunction,
+    AlignmentOptions,
+    FillOptions,
+    RateOptions,
+    WindowingOptions,
+} from "./types";
 import { windowed, WindowedCollection } from "./windowedcollection";
-
-import { AlignmentOptions, FillOptions, RateOptions, WindowingOptions } from "./types";
 
 /**
  * In general, a `Collection` is a bucket of `Event`'s, with no particular order. This,

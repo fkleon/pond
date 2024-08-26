@@ -39,14 +39,14 @@ describe("Window", () => {
         expect(
             window(
                 duration("30m"),
-                period(duration("10s"), time("2015-04-22T02:28:00Z"))
-            ).toString()
+                period(duration("10s"), time("2015-04-22T02:28:00Z")),
+            ).toString(),
         ).toBe("30m@10s+1429669680000");
         expect(
             window(
                 duration("30m"),
-                period(duration("30m"), time("2015-04-22T02:28:00Z"))
-            ).toString()
+                period(duration("30m"), time("2015-04-22T02:28:00Z")),
+            ).toString(),
         ).toBe("30m+1429669680000");
     });
 

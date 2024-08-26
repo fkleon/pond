@@ -157,12 +157,12 @@ export class Fill<T extends Key> extends Processor<T, T> {
      * be filled and returned. That will be a list of indeterminate
      * length.
      */
-    linearFill(event: Event<T>): Array<Event<T>> {
+    linearFill(event: Event<T>): Event<T>[] {
         // See if the event is valid and also if it has any
         // list values to be filled.
         const isValidEvent = this.isValidLinearEvent(event);
 
-        const events: Array<Event<T>> = [];
+        const events: Event<T>[] = [];
         if (isValidEvent && !this._linearFillCache.length) {
             // Valid event, no cached events, use as last good val
             this._lastGoodLinear = event;
@@ -220,12 +220,12 @@ export class Fill<T extends Key> extends Processor<T, T> {
      * A Pipeline result list, etc etc.
      *
      */
-    interpolateEventList(events: Array<Event<T>>): Array<Event<T>> {
+    interpolateEventList(events: Event<T>[]): Event<T>[] {
         let prevValue;
         let prevTime;
 
         // new array of interpolated events for each field path
-        const newEvents: Array<Event<T>> = [];
+        const newEvents: Event<T>[] = [];
 
         const fieldPath = util.fieldAsArray(this._fieldSpec[0]);
 

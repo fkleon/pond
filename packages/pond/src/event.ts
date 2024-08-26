@@ -154,9 +154,9 @@ export class Event<T extends Key = Time> extends Base {
         // Group events by event key
         //
         const mergeDeep = deep || false;
-        const eventList: Array<Event<K>> = [];
+        const eventList: Event<K>[] = [];
 
-        const eventMap: { [key: string]: Array<Event<K>> } = {};
+        const eventMap: { [key: string]: Event<K>[] } = {};
         const keyMap: { [key: string]: K } = {};
         events.forEach((e) => {
             const key = e.getKey();
@@ -174,8 +174,8 @@ export class Event<T extends Key = Time> extends Base {
         // we are considering, we get all the values and reduce them (sum, avg, etc)
         // to a new data object d, which we then build a new Event from.
         //
-        const outEvents: Array<Event<K>> = [];
-        _.each(eventMap, (perKeyEvents: Array<Event<K>>, key: string) => {
+        const outEvents: Event<K>[] = [];
+        _.each(eventMap, (perKeyEvents: Event<K>[], key: string) => {
             let reduced: Event<K> = null;
             let d = null;
             _.each(perKeyEvents, (e: Event<K>) => {
@@ -238,12 +238,7 @@ export class Event<T extends Key = Time> extends Base {
             return Immutable.List();
         }
 
-        let eventTemplate;
-        if (events instanceof Immutable.List) {
-            eventTemplate = events.get(0);
-        } else {
-            eventTemplate = events[0];
-        }
+        const eventTemplate = events instanceof Immutable.List ? events.get(0) : events[0];
 
         let fieldNames: string[];
         if (_.isString(fieldSpec)) {
@@ -255,7 +250,7 @@ export class Event<T extends Key = Time> extends Base {
         //
         // Group events by event key
         //
-        const eventMap: { [key: string]: Array<Event<K>> } = {};
+        const eventMap: { [key: string]: Event<K>[] } = {};
         const keyMap: { [key: string]: K } = {};
         events.forEach((e) => {
             const key = e.getKey();
@@ -273,8 +268,8 @@ export class Event<T extends Key = Time> extends Base {
         // each field we are considering, we get all the values and reduce
         // them (sum, avg, etc) to get a the new data for that key.
         //
-        const outEvents: Array<Event<K>> = [];
-        _.each(eventMap, (perKeyEvents: Array<Event<K>>, key: string) => {
+        const outEvents: Event<K>[] = [];
+        _.each(eventMap, (perKeyEvents: Event<K>[], key: string) => {
             // tslint:disable-next-line
             const mapEvent: { [key: string]: number[] } = {};
             _.each(perKeyEvents, (perKeyEvent: Event<K>) => {
