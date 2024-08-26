@@ -397,8 +397,8 @@ describe("Streaming", () => {
                 iteratee(accum, eventList) {
                     const values = eventList.map(e => e.get("value")).toJS();
                     return event(
-                        time(eventList.last().timestamp()),
-                        Immutable.Map({ avg: avg()(values) })
+                        time((eventList.last() as Event).timestamp()),
+                        Immutable.Map({ avg: avg()(values) }),
                     );
                 }
             })

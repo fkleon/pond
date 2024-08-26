@@ -6,6 +6,7 @@ import { duration } from "../src/duration";
 import { period } from "../src/period";
 import { time } from "../src/time";
 import { daily, window } from "../src/window";
+import { Index } from "../src/index";
 
 import Util from "../src/util";
 
@@ -68,24 +69,9 @@ describe("Window", () => {
         const window1 = daily("America/Los_Angeles");
         const window2 = daily("Etc/UTC");
         const window3 = daily();
-        expect(
-            window1
-                .getIndexSet(t)
-                .first()
-                .asString()
-        ).toBe("2015-04-21");
-        expect(
-            window2
-                .getIndexSet(t)
-                .first()
-                .asString()
-        ).toBe("2015-04-22");
-        expect(
-            window3
-                .getIndexSet(t)
-                .first()
-                .asString()
-        ).toBe("2015-04-22");
+        expect((window1.getIndexSet(t).first() as Index).asString()).toBe("2015-04-21");
+        expect((window2.getIndexSet(t).first() as Index).asString()).toBe("2015-04-22");
+        expect((window3.getIndexSet(t).first() as Index).asString()).toBe("2015-04-22");
     });
 
     /*
