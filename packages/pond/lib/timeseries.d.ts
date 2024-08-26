@@ -28,7 +28,7 @@ export interface TimeSeriesEvents<T extends Key> {
     [propName: string]: any;
 }
 export interface TimeSeriesListReducerOptions {
-    seriesList: Array<TimeSeries<Key>>;
+    seriesList: TimeSeries<Key>[];
     reducer?: (events: Immutable.List<Event<Key>>) => Immutable.List<Event<Key>>;
     fieldSpec?: string | string[];
     [propName: string]: any;

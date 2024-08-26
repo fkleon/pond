@@ -9,10 +9,11 @@
  *  LICENSE file in the root directory of this source tree.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Base = void 0;
 /**
  * Abstract base class used by classes which maybe passed within the streaming code.
  */
 class Base {
 }
 exports.Base = Base;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYmFzZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL3NyYy9iYXNlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQTs7Ozs7Ozs7R0FRRzs7QUFJSDs7R0FFRztBQUNILE1BQXNCLElBQUk7Q0FBRztBQUE3QixvQkFBNkIifQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYmFzZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL3NyYy9iYXNlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQTs7Ozs7Ozs7R0FRRzs7O0FBSUg7O0dBRUc7QUFDSCxNQUFzQixJQUFJO0NBQUc7QUFBN0Isb0JBQTZCIn0=

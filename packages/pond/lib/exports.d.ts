@@ -25,7 +25,7 @@ export { Collapse };
 export { collection, Collection };
 export { event, Event, timeEvent, timeRangeEvent, indexedEvent };
 export { Fill };
-export { avg, count, difference, filter, first, keep, last, max, median, min, percentile, stdev, sum };
+export { avg, count, difference, filter, first, keep, last, max, median, min, percentile, stdev, sum, };
 export { duration, Duration } from "./duration";
 export { grouped, GroupedCollection };
 export { index, Index };

@@ -17,7 +17,7 @@ import { Aggregation, AlignmentOptions, RateOptions, WindowingOptions } from "./
 export interface AggregationSpec<T extends Key> {
     [dest: string]: Aggregation<T>;
 }
-export declare type GroupingFunction<T extends Key> = (e: Event<T>) => string;
+export type GroupingFunction<T extends Key> = (e: Event<T>) => string;
 /**
  * Represents an association of group names to `Collection`s. Typically
  * this is the resulting representation of performing a `groupBy()` on

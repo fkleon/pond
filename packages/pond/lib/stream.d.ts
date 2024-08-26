@@ -365,10 +365,10 @@ export declare class KeyedCollectionStream<IN extends Key, S extends Key> extend
      */
     aggregate(spec: AggregationSpec<IN>): EventStream<Index, S>;
 }
-export declare type EventToKeyedCollection<S extends Key, T extends Key> = Node<Event<S>, KeyedCollection<T>>;
-export declare type KeyedCollectionToEvent<S extends Key, T extends Key> = Node<KeyedCollection<S>, Event<T>>;
-export declare type KeyedCollectionMap<S extends Key, T extends Key> = Node<KeyedCollection<S>, KeyedCollection<T>>;
-export declare type EventMap<S extends Key, T extends Key> = Node<Event<S>, Event<T>>;
+export type EventToKeyedCollection<S extends Key, T extends Key> = Node<Event<S>, KeyedCollection<T>>;
+export type KeyedCollectionToEvent<S extends Key, T extends Key> = Node<KeyedCollection<S>, Event<T>>;
+export type KeyedCollectionMap<S extends Key, T extends Key> = Node<KeyedCollection<S>, KeyedCollection<T>>;
+export type EventMap<S extends Key, T extends Key> = Node<Event<S>, Event<T>>;
 /**
  * `Stream` and its associated objects are designed for processing of incoming
  * `Event` streams at real time. This is useful for live dashboard situations or

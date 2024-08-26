@@ -58,7 +58,7 @@ export declare class Fill<T extends Key> extends Processor<T, T> {
      * be filled and returned. That will be a list of indeterminate
      * length.
      */
-    linearFill(event: Event<T>): Array<Event<T>>;
+    linearFill(event: Event<T>): Event<T>[];
     /**
      * The fundamental linear interpolation workhorse code. Process
      * a list of `Event`'s and return a new list. Does a pass for
@@ -69,7 +69,7 @@ export declare class Fill<T extends Key> extends Processor<T, T> {
      * A Pipeline result list, etc etc.
      *
      */
-    interpolateEventList(events: Array<Event<T>>): Array<Event<T>>;
+    interpolateEventList(events: Event<T>[]): Event<T>[];
     /**
      * Perform the fill operation on the `Event` and return filled
      * in events

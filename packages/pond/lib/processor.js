@@ -9,6 +9,7 @@
  *  LICENSE file in the root directory of this source tree.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Processor = void 0;
 /**
  * Internal abstract base class for streaming chains. A `Processor` is something
  * that implements at a minimum one method: `addEvent()`. The return of that
@@ -26,4 +27,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 class Processor {
 }
 exports.Processor = Processor;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHJvY2Vzc29yLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vc3JjL3Byb2Nlc3Nvci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUE7Ozs7Ozs7O0dBUUc7O0FBT0g7Ozs7Ozs7Ozs7Ozs7R0FhRztBQUNILE1BQXNCLFNBQVM7Q0FFOUI7QUFGRCw4QkFFQyJ9
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHJvY2Vzc29yLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vc3JjL3Byb2Nlc3Nvci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUE7Ozs7Ozs7O0dBUUc7OztBQU9IOzs7Ozs7Ozs7Ozs7O0dBYUc7QUFDSCxNQUFzQixTQUFTO0NBRTlCO0FBRkQsOEJBRUMifQ==

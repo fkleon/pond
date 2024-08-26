@@ -9,10 +9,11 @@
  *  LICENSE file in the root directory of this source tree.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Key = void 0;
 /**
  * Defines the interface for all event keys
  */
 class Key {
 }
 exports.Key = Key;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoia2V5LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vc3JjL2tleS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUE7Ozs7Ozs7O0dBUUc7O0FBRUg7O0dBRUc7QUFDSCxNQUFzQixHQUFHO0NBT3hCO0FBUEQsa0JBT0MifQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoia2V5LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vc3JjL2tleS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUE7Ozs7Ozs7O0dBUUc7OztBQUVIOztHQUVHO0FBQ0gsTUFBc0IsR0FBRztDQU94QjtBQVBELGtCQU9DIn0=

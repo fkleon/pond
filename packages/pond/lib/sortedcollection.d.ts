@@ -4,9 +4,8 @@ import { Event } from "./event";
 import { GroupedCollection, GroupingFunction } from "./groupedcollection";
 import { Key } from "./key";
 import { TimeRange } from "./timerange";
-import { DedupFunction } from "./types";
+import { DedupFunction, AlignmentOptions, FillOptions, RateOptions, WindowingOptions } from "./types";
 import { WindowedCollection } from "./windowedcollection";
-import { AlignmentOptions, FillOptions, RateOptions, WindowingOptions } from "./types";
 /**
  * In general, a `Collection` is a bucket of `Event`'s, with no particular order. This,
  * however, is a sub-class of a `Collection` which always maintains time-based sorting.

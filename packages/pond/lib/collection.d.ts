@@ -3,8 +3,7 @@ import { Base } from "./base";
 import { Event } from "./event";
 import { Key } from "./key";
 import { TimeRange } from "./timerange";
-import { CollapseOptions, SelectOptions } from "./types";
-import { DedupFunction, ReducerFunction } from "./types";
+import { CollapseOptions, SelectOptions, DedupFunction, ReducerFunction } from "./types";
 import { InterpolationType } from "./functions";
 /**
  * A `Collection` holds a ordered (but not sorted) list of `Event`s and provides the
