@@ -487,7 +487,7 @@ describe("Creation", () => {
         });
 
         const c = new Collection(events);
-        const series = new TimeSeries({ name, collection: c });
+        const series = new TimeSeries({ name: "weather", collection: c });
         expect(series.size()).toBe(3);
     });
 
