@@ -32,7 +32,7 @@ export class Fill<T extends Key> extends Processor<T, T> {
 
     // Internal state
     private _previous: Event<T>;
-    private _keyCount;
+    private _keyCount: { [key: string]: number };
     private _lastGoodLinear;
     private _linearFillCache;
 
