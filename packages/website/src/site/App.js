@@ -52,8 +52,14 @@ const docs = {
 
 function buildTypes(root) {
     _.forEach(root, (child) => {
-        const { name, kind } = child;
+        const { name, kind, comment } = child;
         const n = name.toLowerCase();
+
+        // Generate shortText if needed
+        if (comment && comment.summary && !comment.shortText) {
+            comment.shortText = comment.summary.map((c) => c.text).join("");
+        }
+
         child.kind = kindFromVal(kind);
 
         switch (child.kind) {
