@@ -22,13 +22,13 @@
         "ts-jest": "^29.2.5",
         "tslint": "^6.1.3",
         "tslint-config-prettier": "^1.18.0",
-        "typedoc": "^0.14.2",
+        "typedoc": "^0.19.2",
         "typescript": "^4.9.5"
     },
     "scripts": {
         "build": "tsc --version && tsc",
         "watch": "tsc --watch",
-        "docs": "typedoc --json ../website/src/doc.json --mode modules ./src/*.ts --ignoreCompilerErrors",
+        "docs": "typedoc --json ../website/src/doc.json --mode modules ./src/*.ts",
         "test": "jest --watch",
         "lint": "tslint ./src/*.ts"
     },
