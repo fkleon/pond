@@ -34,7 +34,7 @@ import TsMethod from "./api/Method";
 
 // Generated pond.js code and documentation as a JSON file. This is what we are
 // parsing here to generate the API documentation
-import docsJSON from "../doc.json";
+const docsJSON = require("../doc.json");
 
 const docs = {
     modules: {},
