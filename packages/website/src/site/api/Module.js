@@ -11,32 +11,31 @@
 import React, { Component } from "react";
 import _ from "lodash";
 
+import { ReflectionKind } from "../kind";
+
 import TsClass from "./Class";
 import TsType from "./Type";
 import TsEnum from "./Enum";
-import TsObject from "./Object";
 import TsFunction from "./Function";
 import TsInterface from "./Interface";
 
 export default class TsModule extends Component {
     renderChild(child, i) {
-        switch (child.kindString) {
-            case "Class":
+        switch (child.kind) {
+            case ReflectionKind.Class:
                 return <TsClass key={i} class={child} />;
-            case "Function":
+            case ReflectionKind.Function:
                 return <TsFunction key={i} function={child} />;
-            case "Interface":
+            case ReflectionKind.Interface:
                 return <TsInterface key={i} interface={child} />;
-            case "Enumeration":
+            case ReflectionKind.Enum:
                 return <TsEnum key={i} enum={child} />;
-            case "Object literal":
-                return <TsObject key={i} object={child} />;
-            case "Type alias":
+            case ReflectionKind.TypeAlias:
                 return <TsType key={i} type={child} />;
             default:
                 return (
                     <div key={i}>
-                        <h1>{`Unhandled type ${child.kindString}`}</h1>
+                        <h1>{`Unhandled type ${child.kind}`}</h1>
                     </div>
                 );
         }

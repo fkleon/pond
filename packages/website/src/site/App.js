@@ -22,6 +22,8 @@ import Header from "./Header";
 import Sidebar from "./Sidebar";
 import ScrollToTop from "./ScrollToTop";
 
+import { ReflectionKind, kindFromVal } from "./kind";
+
 import TsModule from "./api/Module";
 import TsClass from "./api/Class";
 import TsType from "./api/Type";
@@ -50,35 +52,34 @@ const docs = {
 
 function buildTypes(root) {
     _.forEach(root, (child) => {
-        const { name, kindString } = child;
+        const { name, kind } = child;
         const n = name.toLowerCase();
-        switch (kindString) {
-            case "External module":
+        child.kind = kindFromVal(kind);
+
+        switch (child.kind) {
+            case ReflectionKind.Module:
                 docs.modules[n.replace(/['"]+/g, "")] = child;
                 break;
-            case "Class":
+            case ReflectionKind.Class:
                 docs.classes[n] = child;
                 break;
-            case "Object literal":
-                docs.objects[n] = child;
-                break;
-            case "Function":
+            case ReflectionKind.Function:
                 docs.functions[n] = child;
                 break;
-            case "Interface":
+            case ReflectionKind.Interface:
                 docs.interfaces[n] = child;
                 break;
-            case "Type alias":
+            case ReflectionKind.TypeAlias:
                 docs.types[n] = child;
                 break;
-            case "Method":
+            case ReflectionKind.Method:
                 docs.methods[n] = child;
                 break;
-            case "Enumeration":
-            case "Enumeration member":
+            case ReflectionKind.Enum:
+            case ReflectionKind.EnumMember:
                 docs.enums[n] = child;
                 break;
-            case "Property":
+            case ReflectionKind.Property:
                 docs.properties[n] = child;
                 break;
             default:

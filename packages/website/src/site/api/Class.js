@@ -12,6 +12,8 @@ import React, { Component } from "react";
 import Markdown from "react-markdown";
 import Prism from "prismjs";
 
+import { ReflectionKind } from "../kind";
+
 import Method from "./Method";
 import Property from "./Property";
 
@@ -155,14 +157,14 @@ export default class TsClass extends Component {
     }
 
     renderEntity(entity) {
-        switch (entity.kindString) {
-            case "Function":
+        switch (entity.kind) {
+            case ReflectionKind.Function:
                 return <Method entity={entity} />;
-            case "Constructor":
+            case ReflectionKind.Constructor:
                 return <Method entity={entity} />;
-            case "Property":
+            case ReflectionKind.Property:
                 return <Property entity={entity} />;
-            case "Method":
+            case ReflectionKind.Method:
                 return <Method entity={entity} />;
             default:
                 return <div>{entity.name}</div>;
