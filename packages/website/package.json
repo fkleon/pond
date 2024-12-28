@@ -17,7 +17,8 @@
         "react-sidebar": "^2.3.2"
     },
     "devDependencies": {
-        "react-scripts": "3.4.4",
+        "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+        "react-scripts": "4.0.3",
         "react-test-renderer": "^16.14.0"
     },
     "scripts": {
