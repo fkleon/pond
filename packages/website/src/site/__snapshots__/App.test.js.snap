@@ -49,6 +49,11 @@ exports[`renders a snapshot 1`] = `
           >
             pond.js
           </span>
+          <span>
+             (v: 
+            unknown
+            )
+          </span>
         </div>
       </div>
       <div>
