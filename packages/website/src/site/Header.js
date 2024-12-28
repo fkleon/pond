@@ -12,14 +12,12 @@ import React, { Component } from "react";
 import logo from "./logo.png";
 import github from "./github.png";
 
-/* eslint-disable  jsx-a11y/href-no-hash */
-
 export default class Header extends Component {
     render() {
         const githubLogoStyle = {
             width: 24,
             paddingRight: 5,
-            marginTop: -4
+            marginTop: -4,
         };
         return (
             <nav className="navbar navbar-fixed-top">
