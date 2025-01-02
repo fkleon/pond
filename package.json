@@ -1,9 +1,8 @@
 {
+    "private": true,
     "scripts": {
-        "start": "cd packages/website && npm run start",
-        "build": "cd packages/pond && npm run build",
-        "docs": "cd packages/pond && npm run docs",
-        "build-website": "echo \"*** Building website\n\" && rm -rf docs && cd packages/website && npm run build",
+        "build": "npm run build --workspace packages/pond",
+        "build-website": "npm run build --workspace packages/website",
         "prettier": "prettier --print-width 100 --tab-width 4 --write \"packages/pond/src/**/*.ts\"",
         "prepare": "husky"
     },
@@ -12,5 +11,9 @@
         "lerna": "^8.1.8",
         "prettier": "^3.3.3",
         "pretty-quick": "^4.0.0"
-    }
+    },
+    "workspaces": [
+        "packages/pond",
+        "packages/website"
+    ]
 }

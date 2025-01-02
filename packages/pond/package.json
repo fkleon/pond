@@ -1,13 +1,37 @@
 {
-    "name": "pondjs",
-    "version": "1.0.0-alpha.10",
+    "name": "@fkleon/pondjs",
+    "version": "1.0.0-alpha.11",
     "description": "A TimeSeries library built on Immutable.js with Typescript",
+    "keywords": [
+        "timeseries"
+    ],
+    "homepage": "https://github.com/fkleon/pond#readme",
+    "bugs": {
+        "url": "https://github.com/fkleon/pond/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fkleon/pond.git",
+        "directory": "packages/pond"
+    },
+    "license": "BSD-3-Clause-LBNL",
+    "author": "Software Engineering Group at ESnet",
+    "type": "commonjs",
     "main": "lib/exports.js",
     "types": "lib/exports.d.ts",
-    "author": "Software Engineering Group at ESnet",
-    "license": "BSD-style",
-    "engines": {
-        "node": ">=8"
+    "directories": {
+        "lib": "lib",
+        "test": "tests"
+    },
+    "files": [
+        "/lib"
+    ],
+    "scripts": {
+        "build": "tsc --version && tsc",
+        "watch": "tsc --watch",
+        "docs": "typedoc --json ../website/src/doc.json --mode modules ./src/*.ts",
+        "test": "jest",
+        "lint": "tslint ./src/*.ts"
     },
     "dependencies": {
         "immutable": "4.0.0-rc.12",
@@ -22,15 +46,11 @@
         "ts-jest": "^29.2.5",
         "tslint": "^6.1.3",
         "tslint-config-prettier": "^1.18.0",
-        "typedoc": "^0.19.2",
+        "typedoc": "^0.18.0",
         "typescript": "^4.9.5"
     },
-    "scripts": {
-        "build": "tsc --version && tsc",
-        "watch": "tsc --watch",
-        "docs": "typedoc --json ../website/src/doc.json --mode modules ./src/*.ts",
-        "test": "jest",
-        "lint": "tslint ./src/*.ts"
+    "engines": {
+        "node": ">=8"
     },
     "jest": {
         "transform": {
