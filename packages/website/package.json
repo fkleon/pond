@@ -2,7 +2,15 @@
     "name": "@fkleon/pond-website",
     "version": "1.0.0-alpha.11",
     "private": true,
+    "description": "The documentation website for pondjs",
     "homepage": "http://software.es.net/pond",
+    "license": "BSD-3-Clause-LBNL",
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
     "dependencies": {
         "bootstrap": "^3.3.7",
         "lodash.clonedeep": "^4.5.0",
@@ -19,12 +27,6 @@
         "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
         "react-scripts": "5.0.1",
         "react-test-renderer": "^17.0.2"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
     },
     "browserslist": [
         "defaults"
