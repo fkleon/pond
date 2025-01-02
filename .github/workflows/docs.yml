@@ -22,11 +22,12 @@ jobs:
               with:
                   node-version: 23
                   cache: "npm"
-                  cache-dependency-path: ./packages/website/package-lock.json
+                  cache-dependency-path: ./package-lock.json
             - id: pages-config
               uses: actions/configure-pages@v5
             - name: Install dependencies
               run: npm ci
+              working-directory: ./
             - name: Build the documentation website
               env:
                   REACT_APP_VERSION: ${{ github.ref_name }}
