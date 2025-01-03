@@ -73,10 +73,16 @@ const source = stream()
 
 ## How to install
 
-Pond can be installed from npm.
+Pond can be installed from the GitHub package registry.
 
-The current version of the Typescript rewrite of Pond is pre-release 1.0 alpha, so you need to
-install it explicitly:
+1. Configure `npm` to install packages for the `@fkleon` namespace from GitHub.
+   Create a `.npmrc` with the following content:
+
+```
+@fkleon:registry=https://npm.pkg.github.com
+```
+
+2. The current version is a pre-release 1.0 alpha, so you need to install it explicitly:
 
 ```
 npm install @fkleon/pondjs@1.0.0-alpha.11
@@ -119,8 +125,6 @@ consistency in generics. See these [How to read these docs](https://facebook.git
 for a quick guide to reading Typescript definitions.
 
 # Contributing
-
-Read the [contribution guidelines](./CONTRIBUTING.md).
 
 The library is written in Typescript and has a large and growing Jest test suite.
 To run the tests interactively, use:

@@ -9,6 +9,7 @@
 - First release of forked version [@fkleon/pondjs](https://github.com/fkleon/pond).
 - chore: dependency updates, build fixes, compatiblity fixes
 - chore: update to TypeScript 4.9
+- fix: export additional symbols required for alignment operations
 - fix: output of path invalid value in the case of null value [#136](https://github.com/esnet/pond/pull/136)
 
 ## 1.0.0 alpha.10
