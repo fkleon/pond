@@ -1,9 +1,9 @@
 {
     "private": true,
     "scripts": {
-        "build": "npm run build --workspace packages/pond",
+        "build-lib": "npm run build --workspace packages/pond",
         "build-website": "npm run build --workspace packages/website",
-        "prettier": "prettier --print-width 100 --tab-width 4 --write \"packages/pond/src/**/*.ts\"",
+        "prettier": "prettier ./packages/pond/src/**/*.ts --write",
         "prepare": "husky"
     },
     "devDependencies": {
