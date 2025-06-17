@@ -123,7 +123,7 @@ export class EventOutputNode<T extends Key> extends Node<Event<T>, Event<T>> {
     }
     process(e: Event<T>) {
         this.callback(e);
-        return Immutable.List();
+        return Immutable.List<Event<T>>();
     }
 }
 
@@ -142,7 +142,7 @@ export class KeyedCollectionOutputNode<T extends Key> extends Node<
     process(keyedCollection: KeyedCollection<T>) {
         const [key, collection] = keyedCollection;
         this.callback(collection, key);
-        return Immutable.List();
+        return Immutable.List<KeyedCollection<T>>();
     }
 }
 

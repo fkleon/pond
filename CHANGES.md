@@ -4,6 +4,7 @@
 
 ## unreleased
 
+- chore: update to Immutable.js 4.3.7
 - fix: correctly handle symbols with dots in field paths [#294](https://github.com/esnet/pond/pull/294)
 
 ## 1.0.0 alpha.11

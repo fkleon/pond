@@ -141,7 +141,7 @@ function timeSeries(arg: TimeSeriesWireFormat) {
     const events = points.map((point) => {
         const [key, ...eventValues] = point;
         const d = _.zipObject(eventFields, eventValues);
-        return new Event<Time>(time(key), Immutable.fromJS(d as { [key: string]: {} }));
+        return new Event<Time>(time(key), Immutable.fromJS(d) as Immutable.Map<string, any>);
     });
     return new TimeSeries({ events: Immutable.List(events), ...meta2 });
 }
@@ -167,7 +167,7 @@ function indexedSeries(arg: TimeSeriesWireFormat) {
     const events = points.map((point) => {
         const [key, ...eventValues] = point;
         const d = _.zipObject(eventFields, eventValues);
-        return new Event<Index>(index(key), Immutable.fromJS(d as { [key: string]: {} }));
+        return new Event<Index>(index(key), Immutable.fromJS(d) as Immutable.Map<string, any>);
     });
     return new TimeSeries({ events: Immutable.List(events), ...meta2 });
 }
@@ -195,7 +195,7 @@ function timeRangeSeries(arg: TimeSeriesWireFormat) {
         const d = _.zipObject(eventFields, eventValues);
         return new Event<TimeRange>(
             timerange(key[0], key[1]),
-            Immutable.fromJS(d as { [key: string]: {} }),
+            Immutable.fromJS(d) as Immutable.Map<string, any>,
         );
     });
     return new TimeSeries({ events: Immutable.List(events), ...meta2 });

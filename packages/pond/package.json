@@ -35,7 +35,7 @@
         "format": "prettier ./src/*.ts --write"
     },
     "dependencies": {
-        "immutable": "4.0.0-rc.12",
+        "immutable": "^4.3.7",
         "lodash": "^4.17.21",
         "moment": "^2.30.1",
         "moment-timezone": "^0.5.45"

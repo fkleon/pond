@@ -673,7 +673,7 @@ export class Event<T extends Key = Time> extends Base {
         const data = append ? this.getData().toJS() : {};
         const d = fieldSpecList.map((fs) => this.get(fs));
         data[fieldName] = reducer(d);
-        return this.setData(Immutable.fromJS(data));
+        return this.setData(Immutable.fromJS(data) as Immutable.Map<string, any>);
     }
 
     /**
