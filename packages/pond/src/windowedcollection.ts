@@ -85,7 +85,7 @@ export class WindowedCollection<T extends Key> extends Base {
     constructor(arg1: any, arg2?: any, arg3?: any) {
         super();
         if (Immutable.Map.isMap(arg1)) {
-            this.collections = arg1;
+            this.collections = arg1 as Immutable.Map<string, any>;
         } else {
             this.options = arg1 as WindowingOptions;
 
@@ -177,7 +177,7 @@ export class WindowedCollection<T extends Key> extends Base {
     public flatten(): SortedCollection<T> {
         let events = Immutable.List<Event<T>>();
         this.collections.flatten().forEach((collection) => {
-            events = events.concat(collection.eventList());
+            events = events.concat((collection as SortedCollection<T>).eventList());
         });
         return new SortedCollection<T>(events);
     }

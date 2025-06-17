@@ -388,7 +388,7 @@ export class EventStream<IN extends Key, S extends Key> extends StreamInterface<
      * ```
      */
     output(callback: EventCallback<IN>) {
-        return this.addEventToEventNode<IN>(new EventOutputNode<IN>(callback));
+        return this.addEventToEventNode<IN>(new EventOutputNode<IN>(callback) as EventMap<IN, IN>);
     }
 
     /**
@@ -485,7 +485,7 @@ export class KeyedCollectionStream<IN extends Key, S extends Key> extends Stream
      */
     output(callback: KeyedCollectionCallback<IN>) {
         return this.addKeyedCollectionToKeyedCollectionNode<IN>(
-            new KeyedCollectionOutputNode<IN>(callback),
+            new KeyedCollectionOutputNode<IN>(callback) as KeyedCollectionMap<IN, IN>,
         );
     }
 

@@ -182,7 +182,7 @@ export class GroupedCollection<T extends Key> {
      * containing all `Event`s in all the previous `Collection`s.
      */
     public ungroup(): GroupedCollection<T> {
-        let eventList = Immutable.List();
+        let eventList = Immutable.List<Event<T>>();
         this.collections.forEach((collection, group) => {
             eventList = eventList.concat(collection.eventList());
         });
