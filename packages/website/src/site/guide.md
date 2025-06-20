@@ -1,11 +1,6 @@
 **This is the documentation for the next version (1.0 alpha) of Pond.js, written in Typescript. This
 version has a brand new fully typed API. [CHANGES.md](https://github.com/fkleon/pond/blob/master/CHANGES.md) contains an overview of the differences between the old pre-1.0 API and this one**
 
-Version 0.8.x ([Documentation](https://esnet-pondjs.appspot.com/#/)) is the last released version of
-the old Pond.js API. Note that v0.8 is the only version currently aligned with
-react-timeseries-charts. If you are using react-timeseries-charts or any other library that depends
-on the old API, you should use version 0.8.x.
-
 ---
 
 ## Introduction
@@ -40,16 +35,19 @@ repeated our processing code over and over. Pond.js was built to address these p
 
 ## Getting started
 
-Pond can be installed from npm. The current released version of the Typescript rewrite of Pond is in pre-release so you need to install it explicitly:
+Pond can be installed from the GitHub package registry.
 
-```bash
-> npm install pondjs@1.0.0-alpha.0
+1. Configure `npm` to install packages for the `@fkleon` namespace from GitHub.
+   Create a `.npmrc` with the following content:
+
+```
+@fkleon:registry=https://npm.pkg.github.com
 ```
 
-The old pre-1.0 version (v8.8.x) is available as the default version:
+2. The current version is a pre-release 1.0 alpha, so you need to install it explicitly:
 
-```bash
-> npm install pondjs
+```
+npm install @fkleon/pondjs@1.0.0-alpha.11
 ```
 
 Within a browser it is highly recommended that you use a module bundler such as webpack:
