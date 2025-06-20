@@ -2,7 +2,9 @@
 
 ---
 
-## unreleased
+## 1.0.0 alpha.12
+
+> June 2025
 
 - chore: update to Immutable.js 4.3.7
 - chore: update to TypeScript 5
