@@ -1,6 +1,6 @@
 {
     "name": "@fkleon/pond-website",
-    "version": "1.0.0-alpha.11",
+    "version": "1.0.0-alpha.12",
     "private": true,
     "description": "The documentation website for pondjs",
     "homepage": "http://software.es.net/pond",
